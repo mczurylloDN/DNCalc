@@ -15,36 +15,43 @@ Console.WriteLine("What kind of operation you want ot make?\n"
     + "mul - multiplication\n"
     + "div - dividing"
     );
-String operationType = Console.ReadLine();
+try
+{
+    String operationType = Console.ReadLine();
 
-switch (operationType) {
-    case "add":
-        Console.WriteLine($"Your result: {firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
-        break;
-    case "sub":
-        Console.WriteLine($"Your result: {firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
-        break;
-    case "mul":
-        Console.WriteLine($"Your result: {firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
-        break;
-    case "div":
-        try
-        {
-            Console.WriteLine($"Your result: {firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
-        }
-        catch (DivideByZeroException)
-        {
-            Console.WriteLine("Whooa, slow down cowboy, did you just tried to divide by 0 ?");
-        }
+    switch (operationType) {
+        case "add":
+            Console.WriteLine($"Your result: {firstNumber} + {secondNumber} = " + (firstNumber + secondNumber));
             break;
-    default:
-        {
-            Console.WriteLine("please type correct operation type"); 
+        case "sub":
+            Console.WriteLine($"Your result: {firstNumber} - {secondNumber} = " + (firstNumber - secondNumber));
             break;
+        case "mul":
+            Console.WriteLine($"Your result: {firstNumber} * {secondNumber} = " + (firstNumber * secondNumber));
+            break;
+        case "div":
+            try
+            {
+                Console.WriteLine($"Your result: {firstNumber} / {secondNumber} = " + (firstNumber / secondNumber));
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Whooa, slow down cowboy, did you just tried to divide by 0 ?");
+            }
+                break;
+        default:
+            {
+                Console.WriteLine("please type correct operation type"); 
+                break;
+            }
         }
     }
+catch (NullReferenceException)
+{
+    Console.WriteLine("but, Hey ! You have to write something.");
+}
 
-   
+
 
 
 
