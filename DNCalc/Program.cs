@@ -5,9 +5,9 @@ Console.WriteLine("Here's simple calculator");
 Console.WriteLine("Enjoy!");
 
 Console.WriteLine("Please tell me your first number");
-int firstNumber = Convert.ToInt32(Console.ReadLine());
+double firstNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Please tell your secound number");
-int secondNumber = Convert.ToInt32(Console.ReadLine());
+double secondNumber = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("What kind of operation you want ot make?\n"
     + "add - addition\n"
