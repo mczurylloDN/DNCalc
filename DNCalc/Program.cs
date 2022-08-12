@@ -3,7 +3,7 @@
 Console.WriteLine("Hello,DN programmer!");
 Console.WriteLine("Here's simple calculator");
 Console.WriteLine("Enjoy!");
-
+//todo prevention vs entering strings
 Console.WriteLine("Please tell me your first number");
 double firstNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Please tell your secound number");
@@ -15,6 +15,8 @@ Console.WriteLine("What kind of operation you want ot make?\n"
     + "mul - multiplication\n"
     + "div - dividing"
     );
+//todo make external functions or classes to enable recursion
+//this will make it easier to extend program for deal with more numbers
 try
 {
     String operationType = Console.ReadLine();
